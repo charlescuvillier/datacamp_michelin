@@ -3,35 +3,7 @@
 import pandas as pd
 import numpy as np
 import os
-
 from sklearn.model_selection import StratifiedGroupKFold
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler
-from sklearn.base import BaseEstimator
-from sklearn.pipeline import Pipeline,make_pipeline
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import balanced_accuracy_score
-from xgboost import XGBClassifier
-from catboost import CatBoostClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-
-# workflow libraires
-from sklearn.base import is_classifier
-from sklearn.utils import _safe_indexing
-# from ..utils.importing import import_module_from_source
-
 import rampwf as rw
  
 problem_title = "Classification de restaurant au guide Michelin"
