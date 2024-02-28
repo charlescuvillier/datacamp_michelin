@@ -2,6 +2,7 @@ numpy
 pandas
 scikit-learn>=0.22
 missingno
+opendatasets
 matplotlib
 seaborn
 joblib

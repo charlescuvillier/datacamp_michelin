@@ -3,7 +3,6 @@ classification of michelin star restaurants
 
 Authors : Charles Cuvillier, Lucas Selini, Quentin Garsault, Eric Patarin
 
-
 ## Getting started
 
 ### Install
