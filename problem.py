@@ -103,31 +103,3 @@ def get_test_data(path="."):
 def get_cv(X, y):
     cv = StratifiedGroupKFold(n_splits=2, shuffle=True, random_state=2)
     return cv.split(X, y, groups)
-
-# %% define classification model
-
-X_train_df, y_train = get_train_data()
-X_test_df, y_test = get_test_data()
-
-# The model will take numpy arrays as input.
-X_train = X_train_df.to_numpy()
-
-X_test = X_test_df.to_numpy()
-
-
-numeric_transformer = Pipeline(
-    steps = [
-        ("imputer", SimpleImputer(strategy="constant", fill_value="")),  
-        ("vectorizer", TfidfVectorizer()),  # Convert text to numbers
-        ("scaler", StandardScaler())  
-])
-
-clf_lr = Pipeline(
-    steps=[("transformer", numeric_transformer), ("classifier", LogisticRegression(max_iter=500))]
-)
-
-clf_lr.fit(X_train, y_train)
-y_pred_lr = clf_lr.predict(X_test)
-
-
-print("balanced accuracy score linear regressor (score to beat) = ", balanced_accuracy_score(y_test, y_pred_lr))
