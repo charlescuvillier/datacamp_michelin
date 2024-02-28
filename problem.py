@@ -66,6 +66,11 @@ def _get_data(path=".", split="train", cat_to_int = cat_to_int):
 groups = None
 
 def get_train_data(path="."):
+    data = pd.read_csv(os.path.join(path, "data", "train.csv"))
+    data["name"] = data["name"].astype("category")
+    Name = np.array(data["name"].cat.codes)
+    global groups
+    groups = Name
     return _get_data(path, "train")
 
 
