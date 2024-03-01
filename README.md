@@ -5,6 +5,14 @@ Authors : Charles Cuvillier, Lucas Selini, Quentin Garsault, Eric Patarin
 
 ## Getting started
 
+### Download Support
+
+To download the necessary files, you have to clone the repository:
+```bash
+git clone https://github.com/charlescuvillier/datacamp_michelin.git
+```
+
+
 ### Install
 
 To run a submission and the notebook you will need the dependencies listed

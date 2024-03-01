@@ -34,7 +34,7 @@ score_types = [
 def _get_data(path=".", split="train", cat_to_int = cat_to_int):
     # Load data from csv files into pd.DataFrame
 
-    data_df = pd.read_csv(os.path.join(path, "data", split + ".csv"))
+    data_df = pd.read_csv(os.path.join(path, "data/michelinstar-restaurants", split + ".csv"))
 
     data_df["cuisine1"] = data_df["cuisine1"].astype("category")
     data_df["cuisine2"] = data_df["cuisine2"].astype("category")
@@ -59,14 +59,14 @@ def _get_data(path=".", split="train", cat_to_int = cat_to_int):
     X = data_df[subset]
 
     # labels
-    y = np.array(data_df["michelin_award"].map(cat_to_int).fillna(-1).astype("int8"))
+    y = data_df["michelin_award"].map(cat_to_int).astype("int8")
 
     return X, y
 
 groups = None
 
 def get_train_data(path="."):
-    data = pd.read_csv(os.path.join(path, "data", "train.csv"))
+    data = pd.read_csv(os.path.join(path, "data/michelinstar-restaurants", "train.csv"))
     data["name"] = data["name"].astype("category")
     Name = np.array(data["name"].cat.codes)
     global groups
