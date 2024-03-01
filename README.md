@@ -27,7 +27,7 @@ If you are using `conda`, we provide an `environment.yml` file for similar
 usage.
 
 ### Download Data
-To download the data you need a kaagle account. You need to have your account name and the api key of your account. It will be asked by the terminal to download the necessary data.
+To download the data you need a kaggle account. You need to have your account name and the api key of your account. It will be asked by the terminal to download the necessary data.
 
 Then, you have to run the download_data.py file directly in the terminal, not in a notebook because you cannot write your account information in a notebook.
 
