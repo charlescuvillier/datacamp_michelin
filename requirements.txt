@@ -11,3 +11,10 @@ ipywidgets
 ramp-workflow==0.6.0
 optuna
 imbalanced-learn
+scipy
+tensorflow-cpu
+torch  # pytorch-cpu
+torchvision # torchvision-cpu
+lightgbm
+xgboost
+catboost
