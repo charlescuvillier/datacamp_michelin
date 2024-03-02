@@ -9,7 +9,7 @@ Authors : Charles Cuvillier, Lucas Selini, Quentin Garsault, Eric Patarin
 
 To download the necessary files, you have to clone the repository:
 ```bash
-git clone -b quentin --single-branch https://github.com/charlescuvillier/datacamp_michelin.git
+git clone https://github.com/charlescuvillier/datacamp_michelin.git
 ```
 
 
